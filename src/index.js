@@ -76,25 +76,19 @@ if (!units) {
 }
 
 if (!lastCity) {
-  lastCity = "London";
+  lastCity = "Kuala Lumpur";
   save();
   console.log(`LastCity is ${lastCity}`);
 }
-
-const searchForm = document.getElementById("searchForm");
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 
-searchForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-});
-
 searchBtn.addEventListener("click", async () => {
-  if (searchInput.value === "") return;
-  const weatherData = await getWeather.getData(searchInput.value, units);
+  if (searchInput.value.trim() === "") return;
+  const weatherData = await getWeather.getData(searchInput.value.trim(), units);
   displayWeather.renderWeather(weatherData, units);
   getDateAndTime();
-  lastCity = searchInput.value;
+  lastCity = searchInput.value.trim();
   save();
   console.log(`LastCity is ${lastCity}`);
   console.log(`Units is ${units}`);

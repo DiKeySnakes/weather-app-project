@@ -83,7 +83,7 @@ h1 {
 .input {
   margin-right: 0.5rem;
   background-color: var(--main-white);
-  color: var(--main-black);
+  color: black;
   border: 2px solid transparent;
 }
 
