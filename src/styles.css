@@ -1,1 +1,244 @@
-@import 'normalize.css';
+@import "normalize.css";
+
+:root {
+  --main-white: #faf3e0;
+  --main-black: hsla(0, 0%, 0%, 0.2);
+  --main-text-shadow: 0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.75);
+  --main-box-shadow: 2.5rem 2.5rem 1.25rem 0rem rgba(0, 0, 0, 0.35);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  height: 100vh;
+  font-family: "Cairo", sans-serif;
+  font-size: 1.6rem;
+  text-shadow: var(--main-text-shadow);
+  background-image: url("./images/Sky_with_Sun_Background-1481.jpg");
+  background-size: cover;
+}
+
+header {
+  font-family: "Anton", sans-serif;
+  font-size: 2.4rem;
+  text-shadow: var(--main-text-shadow);
+}
+
+button,
+input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  box-shadow: var(--main-box-shadow);
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  padding: 2rem;
+  background-color: var(--main-black);
+  color: var(--main-white);
+}
+
+h1 {
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.title i {
+  color: var(--main-white);
+  margin-right: 1rem;
+}
+
+.main {
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.form {
+  padding: 1rem;
+  text-align: center;
+}
+
+.input {
+  margin-right: 0.5rem;
+  background-color: var(--main-white);
+  color: var(--main-black);
+  border: 2px solid transparent;
+}
+
+#searchBtn {
+  background-color: var(--main-black);
+  color: var(--main-white);
+  transition: border 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+#searchBtn:hover {
+  border: 2px solid var(--main-white);
+}
+
+#searchBtn:active {
+  color: #999;
+}
+
+.weather-card {
+  display: none;
+  max-width: 70rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 4rem auto;
+  background-color: var(--main-black);
+  color: var(--main-white);
+  box-shadow: var(--main-box-shadow);
+}
+
+.weather-card.active {
+  display: block;
+}
+
+.weather-card * {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.weather-card h3 {
+  font-size: 5rem;
+}
+
+.weather-card span {
+  font-size: 2rem;
+}
+
+.date-and-time {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.date-and-time span {
+  font-size: 2.5rem;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tempDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+#unitBtn {
+  box-shadow: none;
+  background-color: transparent;
+  text-shadow: var(--main-text-shadow);
+  transition: transform 0.3s ease-in-out;
+}
+
+#unitBtn:hover {
+  transform: scale(1.2);
+}
+
+#description {
+  text-transform: capitalize;
+  font-size: 4rem;
+}
+
+#temperature {
+  font-size: 5rem;
+}
+
+.feels-like,
+.humidity,
+.pressure,
+.wind,
+.visibility {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.feels-like span,
+.humidity span,
+.pressure span,
+.wind span,
+.visibility span {
+  font-size: 2.5rem;
+}
+
+#feels-like-icon,
+#humidity-icon,
+#pressure-icon,
+#wind-icon,
+#visibility-icon {
+  width: 3.5rem;
+  filter: invert(89%) sepia(3%) saturate(1216%) hue-rotate(353deg)
+    brightness(110%) contrast(96%);
+}
+
+.display-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--main-white);
+  text-shadow: var(--main-text-shadow);
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50vw;
+  margin-bottom: 2rem;
+}
+
+#footer a {
+  text-decoration: none;
+  color: var(--main-white);
+  text-shadow: var(--main-text-shadow);
+}
+
+#footer a:hover {
+  text-decoration: underline;
+  color: var(--main-white);
+  text-shadow: var(--main-text-shadow);
+}
+
+#icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+#icon:hover {
+  transform: rotate(360deg) scale(1.2);
+}

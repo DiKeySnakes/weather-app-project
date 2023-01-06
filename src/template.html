@@ -5,9 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/63a987d3b1.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <h1 class="title">
+        <i class="fa-solid fa-cloud-sun-rain"></i>Awesome Weather
+      </h1>
+    </header>
+    <main class="main">
+      <form class="form" id="searchForm" novalidate>
+        <input
+          class="input"
+          id="searchInput"
+          type="text"
+          placeholder="Enter city name"
+        />
+        <button class="btn btn-submit" id="searchBtn" type="submit">
+          Search
+        </button>
+      </form>
+      <div class="weather-card" id="weatherCard">
+        <h3 id="cityName"></h3>
+        <div class="date-and-time">
+          <span id="currentDate"></span>
+          <span id="currentTime"></span>
+        </div>
+        <div class="icon-container">
+          <img src="" id="weather-icon" />
+          <div class="tempDiv">
+            <span id="temperature"></span>
+            <button class="btn" id="unitBtn"></button>
+          </div>
+        </div>
+        <p id="description"></p>
+        <div class="display-container">
+          <div class="feels-like">
+            <img src="" alt="" id="feels-like-icon" />
+            <span id="feelsLike"></span>
+          </div>
+          <div class="humidity">
+            <img src="" alt="" id="humidity-icon" />
+            <span id="humidity"></span>
+          </div>
+          <div class="pressure">
+            <img src="" alt="" id="pressure-icon" />
+            <span id="pressure"></span>
+          </div>
+          <div class="wind">
+            <img src="" alt="" id="wind-icon" />
+            <span id="wind"></span>
+          </div>
+        </div>
+        <div class="visibility">
+          <img src="" alt="" id="visibility-icon" />
+          <span id="visibility"></span>
+        </div>
+      </div>
+    </main>
+    <div id="footer">
+      <footer>
+        <p>
+          Created by DiKeySnakes for
+          <a href="https://theodinproject.com/" target="_blank"
+            >The Odin Project</a
+          >
+          curriculum
+        </p>
+        <p>
+          Copyright &copy; DiKeySnakes 2023
+          <a
+            href="https://github.com/DiKeySnakes/weather-app-project"
+            target="_blank"
+            ><i id="icon" class="fa-brands fa-github"></i
+          ></a>
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
